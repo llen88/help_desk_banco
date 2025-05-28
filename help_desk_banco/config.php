@@ -1,3 +1,3 @@
 <?php
-  require 'config_cima.php'
+  require '../../../Arquivos_Protegidos/config_cima.php'
 ?>
