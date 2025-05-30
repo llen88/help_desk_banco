@@ -1,30 +1,37 @@
 <?php
-require_once "validador_acesso.php"
-?>
+require_once "validador_acesso.php";
+
+require 'config.php';
 
 
-<?php
-
-$id= str_replace('|','-',$_SESSION['id']);
-$perfil= str_replace('|','-',$_SESSION['perfil']);
-$nome= str_replace('|','-',$_SESSION['nome']);
-$titulo= str_replace('|','-',$_POST['titulo']);
-$categoria= str_replace('|','-',$_POST['categoria']);
-$descricao= str_replace('|','-',$_POST['descricao']);
 
 
-$dados = $id .'|' .$perfil . '|' . $nome . '|' . $titulo . '|' . $categoria . '|'.
-$descricao . PHP_EOL;
 
-var_dump($dados);
-
-$arquivo= fopen('../../../Arquivos_Protegidos/app_help_desk.hd','a');
-
-fwrite($arquivo, $dados);
-
-fclose($arquivo);
-
-header('location: abrir_chamado.php?cadastro=efetuado')
+//verificar se o chamado ja exite;
 
 
-?>
+
+$perfil = $_SESSION['perfil'];
+
+$titulo = $_POST['titulo'];
+$categoria = $_POST['categoria'];
+$descricao = $_POST['descricao'];
+$id_usuario = $_SESSION['id'];
+
+$statuschamado = 'Aberto';
+
+
+
+$sql = "INSERT INTO chamados(titulo, categoria, descricao, id_usuario, statuschamado) VALUES('{$titulo}', '{$categoria}', '{$descricao}', '{$id_usuario}', '{$statuschamado}')";
+$res = $conexao->query($sql);
+
+if ($res == true) {
+    header('location: abrir_chamado.php?cadastro=efetuado');
+} else {
+    header('location: abrir_chamado.php?cadastro=erro');
+}
+
+
+
+
+    ?>

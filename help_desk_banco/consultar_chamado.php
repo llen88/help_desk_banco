@@ -1,30 +1,33 @@
 <?php
 require_once "validador_acesso.php";
+
+require "config.php";
+
 //require
 //include
 //include_once
-$chamados = [];
 
-$arquivo = fopen('../../../Arquivos_Protegidos/app_help_desk.hd', 'r');
+if ($_SESSION['perfil'] != 'Adm') {
+  $sql = "SELECT * FROM chamados Where id_usuario = {$_SESSION['id']}";
+  } else{
+    $sql= "SELECT * FROM chamados";
 
-while (!feof($arquivo)) {
+  }
+  $res = $conexao->query($sql);
+  $qtd = $res->num_rows;
 
-  $registro = fgets($arquivo);
-
-  $chamados[] = $registro;
-}
-
-fclose($arquivo);
-?>
-
-
+   $sql ="SELECT * FROM usuarios";
+   $resUsuarios = $conexao->query($sql);
+   $qtdUsuarios = $resUsuarios->num_rows;
+   ?>
 <html>
 
 <head>
   <meta charset="utf-8" />
   <title>App Help Desk</title>
 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
   <style>
     .card-consultar-chamado {
@@ -52,35 +55,16 @@ fclose($arquivo);
         <div class="card">
           <div class="card-header">
             Consulta de chamado
-
-
           </div>
 
           <div class="card-body">
 
-            <?php foreach ($chamados as $chamado) { ?>
-
-              <?php $chamado_dados = explode('|', $chamado);
-
-              //Para validar que só será exibido um novo card se possuir todos os valores preenchidos
-
-              if (count($chamado_dados) < 6) {
-                continue;
-              }
-
-              if ($_SESSION['perfil'] === 'user') {
-                if ($chamado_dados[0] != $_SESSION['id']) {
-                  continue;
-                }
-              }
-              ?>
-
-
-
+            <?php while( $row = $res->fetch_assoc() ) { ?>
+            
               <div class="card mb-3 bg-light">
                 <div class="card-body">
 
-                  <h5 class="card-title"><?php echo $chamado_dados[3] ?></h5>
+                  <h5 class="card-title"><?php echo $row -> titulo ?></h5>
                   <h6 class="card-subtitle mb-2 text-muted">
                     <?php echo '<p style="color: green; margin-bottom: 2px;"> Usuário:' . $chamado_dados[2] . '</p>'; ?>
                   </h6>

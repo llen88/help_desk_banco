@@ -1,7 +1,7 @@
 
 <?php
 
-    include ('config.php');
+    include 'config.php';
     //  verificar se o cadastro ja existe  
     $sql= "SELECT * FROM usuarios WHERE email='{$_POST['email']}'";
     $res= $conexao->query($sql);
