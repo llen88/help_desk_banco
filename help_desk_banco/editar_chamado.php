@@ -17,11 +17,7 @@
     }
     .btn-sm {
       padding: 5px; /* Define um padding de 5px para os botões */
-<<<<<<< Updated upstream
-      min-width: auto; /* Remove a largura mínima *
-=======
       min-width: auto; /* Remove a largura mínima */
->>>>>>> Stashed changes
     }
     .thead-light th {
       background-color: #ffffff; /* Define a cor de fundo branco */
@@ -119,11 +115,7 @@
                     while ($user = $resusuarios->fetch_object()){
                         if ($user -> id_usuario == $idusuario){
                             print "<td class='hide-on-small'>" . $user -> nome . "</td>";
-<<<<<<< Updated upstream
-                            break; // Adicionado para sair do loop após encontrar o usuáro
-=======
                             break; // Adicionado para sair do loop após encontrar o usuário
->>>>>>> Stashed changes
                         }
                     }
                     
