@@ -14,27 +14,38 @@ require_once "validador_acesso.php";
   <meta charset="utf-8" />
   <title>App Help Desk</title>
 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.3/dist/darkly/bootstrap.min.css">
+
 
   <style>
     .card-home {
-      padding: 30px 0 0 0;
+      padding: 50px 0 0 0;
       width: 100%;
-      margin: 0 auto;
+      margin-top: 20px;
+      
     }
 
     button {
-
-      border-radius: 5px;
+      border-radius: 10px;
       color: 'white';
+      background-color:yellow;
+      width: 80px;
+      height: 40px;
+      margin: 10px auto;
+      display: block;
+      font-weight: bold;
+      font-size: 16px;
     }
 
     button:hover {
-
       color: 'white';
       background-color: #343A40;
-      color: '#ffff';
+      color: red;
+    }
+
+    .card-body{
+      background-color: #343A40;
+      color: white; 
     }
   </style>
 </head>
@@ -66,44 +77,40 @@ require_once "validador_acesso.php";
 
               <div class="col-2 d-flex justify-content-center">
                 <a href="abrir_chamado.php">
-                  <img src="img/formulario_abrir_chamado.png" width="70" height="70">
+                  <img src="./img/formulario.png" width="70" height="70">
                 </a>
               </div>
 
 
               <div class="col-2 d-flex justify-content-center">
                 <a href="consultar_chamado.php">
-                  <img src="img/formulario_consultar_chamado.png" width="70" height="70">
+                  <img src="./img/consultar-chamado.png" width="70" height="70">
                 </a>
               </div>
 
               <div class="col-2 d-flex justify-content-center">
-                <a href="abrir_chamado.php">
-                  <img src="formulario_abrir_chamado.png" width="70" height="70">
+                <a href="editar-chamado.php">
+                  <img src="./img/editar-chamado.png" width="70" height="70">
                 </a>
               </div>
 
               <div class="col-2 d-flex justify-content-center">
-                <a href="abrir_chamado.php">
-                  <img src="formulario_abrir_chamado.png" width="70" height="70">
+                <a href="edit-chamado">
+                  <img src="./img/autorizar.png" width="70" height="70">
                 </a>
               </div>
 
               <div class="col-2 d-flex justify-content-center">
-                <a href="abrir_chamado.php">
-                  <img src="formulario_abrir_chamado.png" width="70" height="70">
+                <a href="autorizar-usuarios.php">
+                  <img src="./img/icon-usuario.png" width="70" height="70">
                 </a>
               </div>
 
-                            <div class="col-2 d-flex justify-content-center">
-                <a href="abrir_chamado.php">
-                  <img src="formulario_abrir_chamado.png" width="70" height="70">
+              <div class="col-2 d-flex justify-content-center">
+                <a href="relatorios.php">
+                  <img src="./img/consulta-de-pesquisa.png" width="70" height="70">
                 </a>
               </div>
-
-
-
-
 
             </div>
           </div>

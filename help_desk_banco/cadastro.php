@@ -4,14 +4,23 @@
   <meta charset="utf-8" />
   <title>App Help Desk</title>
 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.3/dist/darkly/bootstrap.min.css">
+
+
   <link rel="icon" href="imagens/logo.png" type="image/x-icon">
 
   <style>
     .card-login {
       padding: 30px 0 0 0;
       width: 350px;
-      margin: 0 auto;
+      margin: 10px auto;
+    }
+    
+
+    .btn{
+      border-radius: 10px;
+      margin: 10px auto;
+      display: block;
     }
   </style>
 </head>
@@ -37,7 +46,7 @@
         <div class="card">
           <div class="card-header">
             Cadastre-se:
-            <img src="imagens/user.png" style="margin-left: 175px; width:35px" alt="">
+            <img src="./img/autorizacao.png" style="margin-left: 175px; width:35px" alt="">
           </div>
           <div class="card-body">
             <form action="valida_cadastro.php" method="POST">
