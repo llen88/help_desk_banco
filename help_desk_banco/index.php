@@ -45,7 +45,7 @@
 
 <body>
     <!--login-->
-        <nav class="navbar navbar-dark bg-dark">
+    <nav class="navbar navbar-dark bg-dark">
         <img src="./img/logoChapeu.png" width="50" height="50" class="d-inline-block align-top" alt="Logo of a hat">
         <a class="navbar-brand" href="#">help desk</a>
 

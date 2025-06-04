@@ -22,13 +22,13 @@ require_once "validador_acesso.php";
       padding: 50px 0 0 0;
       width: 100%;
       margin-top: 20px;
-      
+
     }
 
     button {
       border-radius: 10px;
       color: 'white';
-      background-color:yellow;
+      background-color: yellow;
       width: 80px;
       height: 40px;
       margin: 10px auto;
@@ -43,9 +43,15 @@ require_once "validador_acesso.php";
       color: red;
     }
 
-    .card-body{
+    .card-body {
       background-color: #343A40;
-      color: white; 
+      color: white;
+    }
+
+    .imagemCentral{
+      width: 45%;
+      margin: 50px auto;
+      display: block;
     }
   </style>
 </head>
@@ -78,7 +84,6 @@ require_once "validador_acesso.php";
               <div class="col-2 d-flex justify-content-center">
                 <a href="abrir_chamado.php">
                   <img src="./img/formulario.png" width="70" height="70">
-                  <p>Abrir Chamado</p>
                 </a>
               </div>
 
@@ -86,7 +91,6 @@ require_once "validador_acesso.php";
               <div class="col-2 d-flex justify-content-center">
                 <a href="consultar_chamado.php">
                   <img src="./img/consultar-chamado.png" width="70" height="70">
-                  <p>Consultar Chamado</p>
                 </a>
               </div>
 
@@ -94,37 +98,32 @@ require_once "validador_acesso.php";
 
                 <a href="editar_chamado.php">
                   <img src="./img/editar-chamado.png" width="70" height="70">
-                  <p>Editar chamado</p>
                 </a>
 
               </div>
 
               <div class="col-2 d-flex justify-content-center">
-               
-              <a href="autorizar_usuarios.php">
+                <a href="">
                   <img src="./img/autorizar.png" width="70" height="70">
-                  <p>Autorizar</p>
                 </a>
               </div>
 
               <div class="col-2 d-flex justify-content-center">
                 <a href="autorizar-usuarios.php">
                   <img src="./img/icon-usuario.png" width="70" height="71">
-                  <p>Usuarios</p>
                 </a>
               </div>
 
               <div class="col-2 d-flex justify-content-center">
                 <a href="relatorios.php">
                   <img src="./img/consulta-de-pesquisa.png" width="70" height="70">
-                  <p>Relatorios</p>
-
                 </a>
               </div>
 
             </div>
           </div>
         </div>
+        <img class="imagemCentral" src="./img/central.webp" alt="">
       </div>
     </div>
   </div>
