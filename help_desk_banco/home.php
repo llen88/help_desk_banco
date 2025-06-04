@@ -90,7 +90,7 @@ require_once "validador_acesso.php";
 
               <div class="col-2 d-flex justify-content-center">
 
-                <a href="atualizar_chamado.php">
+                <a href="editar_chamado.php">
                   <img src="./img/editar-chamado.png" width="70" height="70">
                 </a>
 
