@@ -89,14 +89,11 @@ require_once "validador_acesso.php";
               </div>
 
               <div class="col-2 d-flex justify-content-center">
-<<<<<<< Updated upstream
-                <a href="editar-chamado.php">
+
+                <a href="atualizar_chamado.php">
                   <img src="./img/editar-chamado.png" width="70" height="70">
-=======
-                <a href="editar_chamado.php">
-                  <img src="formulario_abrir_chamado.png" width="70" height="70">
->>>>>>> Stashed changes
                 </a>
+
               </div>
 
               <div class="col-2 d-flex justify-content-center">
