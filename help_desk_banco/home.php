@@ -78,6 +78,7 @@ require_once "validador_acesso.php";
               <div class="col-2 d-flex justify-content-center">
                 <a href="abrir_chamado.php">
                   <img src="./img/formulario.png" width="70" height="70">
+                  <p>Abrir Chamado</p>
                 </a>
               </div>
 
@@ -85,6 +86,7 @@ require_once "validador_acesso.php";
               <div class="col-2 d-flex justify-content-center">
                 <a href="consultar_chamado.php">
                   <img src="./img/consultar-chamado.png" width="70" height="70">
+                  <p>Consultar Chamado</p>
                 </a>
               </div>
 
@@ -92,25 +94,31 @@ require_once "validador_acesso.php";
 
                 <a href="editar_chamado.php">
                   <img src="./img/editar-chamado.png" width="70" height="70">
+                  <p>Editar chamado</p>
                 </a>
 
               </div>
 
               <div class="col-2 d-flex justify-content-center">
-                <a href="">
+               
+              <a href="autorizar_usuarios.php">
                   <img src="./img/autorizar.png" width="70" height="70">
+                  <p>Autorizar</p>
                 </a>
               </div>
 
               <div class="col-2 d-flex justify-content-center">
                 <a href="autorizar-usuarios.php">
                   <img src="./img/icon-usuario.png" width="70" height="71">
+                  <p>Usuarios</p>
                 </a>
               </div>
 
               <div class="col-2 d-flex justify-content-center">
                 <a href="relatorios.php">
                   <img src="./img/consulta-de-pesquisa.png" width="70" height="70">
+                  <p>Relatorios</p>
+
                 </a>
               </div>
 
