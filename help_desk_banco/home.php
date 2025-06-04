@@ -109,7 +109,7 @@ require_once "validador_acesso.php";
 
               <div class="col-2 d-flex justify-content-center">
                 <a href="autorizar-usuarios.php">
-                  <img src="./img/icon-usuario.png" width="70" height="71">
+                  <img src="./img/icon-usuario.png" width="71" height="71">
                   <p>Usuarios</p>
                 </a>
               </div>
