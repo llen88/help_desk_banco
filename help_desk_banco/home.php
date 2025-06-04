@@ -89,7 +89,7 @@ require_once "validador_acesso.php";
               </div>
 
               <div class="col-2 d-flex justify-content-center">
-
+s
                 <a href="editar_chamado.php">
                   <img src="./img/editar-chamado.png" width="70" height="70">
                 </a>
@@ -97,7 +97,7 @@ require_once "validador_acesso.php";
               </div>
 
               <div class="col-2 d-flex justify-content-center">
-                <a href="edit-chamado">
+                <a href="">
                   <img src="./img/autorizar.png" width="70" height="70">
                 </a>
               </div>
