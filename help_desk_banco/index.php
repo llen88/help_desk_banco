@@ -75,7 +75,7 @@
                         <?php
 
                         if (isset($_GET['login']) && $_GET['login'] === 'erro2') { ?>
-                            <div class="text-danger"> login obrigatorio!</div>
+                            <div class="text-danger"> login obrigatorio!</div>  
                         <?php }  ?>
 
                         <button class="btn btn-primary d-block mx-auto">Entrar</button>
