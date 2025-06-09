@@ -83,7 +83,7 @@ require "config.php";
   <?php } ?>
 
   <?php //VALIDA SE O CHAMADO FOI EDITADO
-  if (isset($_GET['edicao']) && $_GET['edicao'] === 'sucesso') { ?>
+  if (isset($_GET['atualizacao']) && $_GET['atualizacao'] === 'sucesso') { ?>
     <script>
       alert('Chamado Editado!');
     </script>

@@ -78,44 +78,44 @@ require_once "validador_acesso.php";
 
     }
 
-  @media (max-width: 1040px) {
-    .card-abrir-chamado {
-      width: 60%;
-    }
-  }
-
-  @media (max-width: 768px) {
-    .card-abrir-chamado {
-      width: 80%;
+    @media (max-width: 1040px) {
+      .card-abrir-chamado {
+        width: 60%;
+      }
     }
 
-    .card-header {
-      font-size: 1.1rem;
+    @media (max-width: 768px) {
+      .card-abrir-chamado {
+        width: 80%;
+      }
+
+      .card-header {
+        font-size: 1.1rem;
+      }
+
+      .btn {
+        padding: 12px;
+        font-size: 1rem;
+      }
     }
 
-    .btn {
-      padding: 12px;
-      font-size: 1rem;
-    }
-  }
+    @media (max-width: 480px) {
+      .card-abrir-chamado {
+        width: 95%;
+      }
 
-  @media (max-width: 480px) {
-    .card-abrir-chamado {
-      width: 95%;
-    }
+      .card-header {
+        font-size: 1rem;
+      }
 
-    .card-header {
-      font-size: 1rem;
-    }
+      .card-body {
+        padding: 15px;
+      }
 
-    .card-body {
-      padding: 15px;
-    }
-
-    .btn {
-      padding: 10px;
-      font-size: 0.95rem;
-    }
+      .btn {
+        padding: 10px;
+        font-size: 0.95rem;
+      }
     }
   </style>
 
@@ -123,75 +123,74 @@ require_once "validador_acesso.php";
 
 <body>
 
-  <nav class="navbar navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">
-      <img src="img/logoChapeu.png" width="30" height="30" class="d-inline-block align-top" alt="">
-      App Help Desk
+    <nav class="navbar navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">
+        <img src="logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+        App Help Desk
     </a>
-  </nav>
+    </nav>
 
-  <div class="container">
-    <div class="row">
+    <div class="container">    
+      <div class="row">
 
-      <div class="card-abrir-chamado">
-        <div class="card">
-          <div class="card-header">
-            Abertura de chamado
-            <?php if (isset($_GET['cadastro']) && $_GET['cadastro'] === 'efetuado') { ?>
-              <script>
-                alert('Chamado cadastrado com sucesso')
-              </script>
-            <?php } ?>
-          </div>
-          <div class="card-body">
-            <div class="row">
-              <div class="col">
+        <div class="card-abrir-chamado">
+          <div class="card">
+            <div class="card-header">
+              Abertura de chamado
+              <?php if(isset($_GET['cadastro']) && $_GET['cadastro'] ==='efetuado') {?>
+                <script>
+                  alert('Chamado cadastrado com sucesso')
+                </script>
+                <?php } ?>
+            </div>
+            <div class="card-body">
+              <div class="row">
+                <div class="col">
+                  
+                  <form action="registra_chamado.php" method="POST">
+                    <div class="form-group">
+                      <label>Título</label>
+                      <input type="text" class="form-control" name="titulo" placeholder="Título">
+                    </div>
+                    
+                    <div class="form-group">
+                      <label>Categoria</label>
+                      <select class="form-control" name="categoria">
+                        <option>Criação Usuário</option>
+                        <option>Impressora</option>
+                        <option>Hardware</option>
+                        <option>Software</option>
+                        <option>Rede</option>
+                      </select>
+                    </div>
+                    
+                    <div class="form-group">
+                      <label>Descrição</label>
+                      <textarea class="form-control" rows="3" name=descricao></textarea>
+                    </div>
 
-                <form action="registra_chamado.php" method="POST">
-                  <div class="form-group">
-                    <label>Título</label>
-                    <input type="text" class="form-control" name="titulo" placeholder="Título">
-                  </div>
-
-                  <div class="form-group">
-                    <label>Categoria</label>
-                    <select class="form-control" name="categoria">
-                      <option>Criação Usuário</option>
-                      <option>Impressora</option>
-                      <option>Hardware</option>
-                      <option>Software</option>
-                      <option>Rede</option>
-                    </select>
-                  </div>
-
-                  <div class="form-group">
-                    <label>Descrição</label>
-                    <textarea class="form-control" rows="3" name=descricao></textarea>
-                  </div>
-
-                  <div class="row mt-5">
                     <div class="row mt-5">
                       <div class="col-6">
-                        <a class="btn btn-lg btn-warning" href="home.php">Voltar</a>
+                        <a href="home.php">
+                        <a class="btn btn-lg btn-warning btn-block" href="home.php">Voltar</a>
                       </div>
-
-                      <div class="col-6">
-                        <button class="btn btn-lg btn-info" type="submit">Abrir</button>
+                      
+                      <div class="col-6" id="btnAbrir">
+                        <button class="btn btn-lg btn-info btn-block" type="submit">Abrir</button>
                       </div>
                     </div>
-                  </div>
-                  <script>
+                    <script>
+                       
 
+                    </script>
+                  </form>
 
-                  </script>
-                </form>
-
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
     </div>
-</body>
+  </body>
 
 </html>

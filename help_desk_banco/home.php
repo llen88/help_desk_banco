@@ -103,15 +103,14 @@ require_once "validador_acesso.php";
               </div>
 
               <div class="col-2 d-flex justify-content-center">
-                <a href="">
+                <a href="autorizar_usuario.php">
                   <img src="./img/autorizar.png" width="70" height="70">
                 </a>
               </div>
 
               <div class="col-2 d-flex justify-content-center">
-                <a href="autorizar-usuarios.php">
-                  <img src="./img/icon-usuario.png" width="71" height="71">
-                  <p>Usuarios</p>
+                <a href="usuarios.php">
+                  <img src="./img/icon-usuario.png" width="70" height="71">
                 </a>
               </div>
 
