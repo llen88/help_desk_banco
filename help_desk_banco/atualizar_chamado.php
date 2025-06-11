@@ -21,7 +21,7 @@ $qtdusuarios = $resusuarios-> num_rows;
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="icon" href="imagens/logo.png" type="image/x-icon">
-
+  <link rel="icon" href="img/iconSite.png" type="image/x-icon">
   <style>
     .card-abrir-chamado {
       padding: 30px 0 0 0;
@@ -30,6 +30,27 @@ $qtdusuarios = $resusuarios-> num_rows;
     }
     .hide-on-small {
       display: none;
+    }
+    body{
+      background-color: rgb(34, 34, 35);
+
+    }
+    .card-body{
+          background-color: rgb(25, 25, 25);
+    }
+    .label{
+      color:#fff;
+    }
+    .btn{
+      color:#fff
+
+    }
+    a :hover{
+      color:black
+
+    }
+    #ordemServico{
+      font-weight:bold ;
     }
     @media (min-width: 1000px) {
       .hide-on-small {
@@ -42,7 +63,7 @@ $qtdusuarios = $resusuarios-> num_rows;
 <body>
   <nav class="navbar navbar-dark bg-dark">
     <a class="navbar-brand" href="home.php">
-      <img src="../app_help_desk_BD/imagens/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+      <img src="img/logoChapeu.png" width="30" height="30" class="d-inline-block align-top" alt="">
       App Help Desk
     </a>
     <ul class="navbar-nav">
@@ -61,7 +82,7 @@ $qtdusuarios = $resusuarios-> num_rows;
     <div class="row">
       <div class="card-abrir-chamado">
         <div class="card">
-          <div class="card-header">Ordem de Serviço <?php print $row->id_chamado; ?></div>
+          <div  id="OrdemServico" class="card-header">Ordem de Serviço <?php print $row->id_chamado; ?></div>
           <div class="card-body">
             <div class="row">
               <div class="col">
@@ -71,7 +92,7 @@ $qtdusuarios = $resusuarios-> num_rows;
                    <input name="id_chamado" type="hidden" class="form-control" value="<?php print $row->id_chamado; ?>" required>
                     
                   <div class="form-group">
-                    <label>Título</label>
+                    <label class="label" >Título</label>
                     <!-- titulo -->
                     <input name="titulo" type="text" class="form-control" value="<?php print $row->titulo; ?>" required autofocus>
                   </div>
@@ -79,7 +100,7 @@ $qtdusuarios = $resusuarios-> num_rows;
                   <div class="card-body">
                     <div class="row">
                       <div class="col-6 d-flex justify-content-center">
-                        <label class="col-2 d-flex justify-content-center align-self-center hide-on-small">Categoria</label>
+                        <label  class="label"class="col-2 d-flex justify-content-center align-self-center hide-on-small">Categoria: </label>
                             <!-- categoria -->
                         <select name="categoria" class="form-control" required>
                           <option value="<?php print $row->categoria; ?>" selected><?php print $row->categoria; ?></option>
@@ -97,7 +118,7 @@ $qtdusuarios = $resusuarios-> num_rows;
                         </select>
                                 <!-- status -->
                          <div class="col-6 d-flex justify-content-center">
-                        <label class="col-2 d-flex justify-content-center align-self-center hide-on-small">Status</label>
+                        <label class="label" class="col-2 d-flex justify-content-center align-self-center hide-on-small">Status: </label>
                         <select name="status" class="form-control" required>
                           <option value="" disabled selected>Escolha</option>
                           <option value="Aberto">Aberto</option>
@@ -109,26 +130,26 @@ $qtdusuarios = $resusuarios-> num_rows;
                   </div>
                     <!-- descrição do Usuario -->
                    <div class="form-group">
-                    <label>Descrição do Usuário</label>
+                    <label class="label">Descrição do Usuário</label>
                     <textarea name="descricao" class="form-control" rows="3" required disabled><?php echo trim($row->descricao); ?></textarea>
                   </div>
 
                       <!-- </div> -->
                        <!-- Descrição do Técnio -->
                   <div class="form-group">
-                    <label>Descrição do Técnico</label>
+                    <label class="label">Descrição do Técnico</label>
                     <textarea name="descricaotecnico" class="form-control" rows="3" required><?php echo trim($row->descricaotecnico); ?></textarea>
                   </div>
                 
                     <!-- valor -->
                 <div class="form-group">
-                <label>Valor</label>
+                <label class="label">Valor</label>
                 <input name="valor" type="text" class="form-control" value="<?php print $row->valor; ?>" required autofocus>
                 </div>
 
                 <div class="row mt-5">
                     <div class="col-6">
-                      <a class="btn btn-lg btn-warning btn-block" href="editar_chamado.php">Cancelar</a>
+                      <a rel="prev" class="btn btn-lg btn-warning btn-block" href="editar_chamado.php">Cancelar</a>
                     </div>
                     <div class="col-6">
                       <button class="btn btn-lg btn-info btn-block" type="submit">Salvar</button>

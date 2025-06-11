@@ -15,6 +15,7 @@ require_once "validador_acesso.php";
   <title>App Help Desk</title>
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.3/dist/darkly/bootstrap.min.css">
+   <link rel="icon" href="img/iconSite.png" type="image/x-icon">
 
 
   <style>

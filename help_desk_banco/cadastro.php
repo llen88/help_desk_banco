@@ -46,20 +46,25 @@
         <div class="card">
           <div class="card-header">
             Cadastre-se:
-            <img src="./img/autorizacao.png" style="margin-left: 175px; width:35px" alt="">
+            <img src="img/logo-1-estrela.png" style="margin-left: 175px; width:35px" alt="">
           </div>
           <div class="card-body">
             <form action="valida_cadastro.php" method="POST">
               <div class="form-group">
+                   <label class="label" >Nome</label>
                 <input name="nome" type="text" class="form-control" placeholder="Nome Completo" required autofocus>
               </div>              
               <div class="form-group">
+                <label class="label" >E-mail</label>
                 <input name="email" type="email" class="form-control" placeholder="E-mail" required>
               </div>
               <div class="form-group">
+                  <label class="label" >Senha</label>
                 <input name="senha" type="password" class="form-control" placeholder="Senha" required>
               </div>
+             
               <div class="form-group">
+                <label class="label" >Perfil</label>
                 <select name="perfil" class="form-control">
                     <option style="text-align: center;">-- Selecione --</option>
                     <option>Usuario</option>
