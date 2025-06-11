@@ -64,12 +64,15 @@ require_once "validador_acesso.php";
      
     }
     .row{
+      flex:1;
       align-items: center;
       justify-content:'center';
     }
 
     .imagemCentral{
-      
+  
+      width: '100%';
+
     }
 
   </style>
