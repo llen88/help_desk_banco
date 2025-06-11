@@ -5,11 +5,11 @@ require_once "config.php";
 $id_chamado = $_POST['id_chamado'];
 $titulo=$_POST['titulo'];
 $categoria=$_POST['categoria'];
-$statuschamado = ['statuschamado'];
+$statuschamado = $_POST['status'];
 $descricaotecnico = $_POST['descricaotecnico'];
 $valor = $_POST['valor'];
 
-$sql = "UPDATE chamados SET titulo= '$titulo', categoria= '$categoria', descricaotecnico= '$descricaotecnico', valor='$valor' WHERE id_chamado='$id_chamado'";
+$sql = "UPDATE chamados SET titulo= '$titulo', categoria= '$categoria', descricaotecnico= '$descricaotecnico', statuschamado= '$statuschamado', valor='$valor' WHERE id_chamado='$id_chamado'";
  //var_dump($sql);
 
 $res = $conexao->query($sql);
