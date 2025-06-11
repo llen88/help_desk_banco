@@ -4,6 +4,6 @@
 
     $sql ="SELECT * from usuarios WHERE id_usuario = {$_GET['id']}";
     $res = $conexao -> query($sql);
-    $qld = $res -> num
+    $qld = $res -> num_;
 
 ?>
