@@ -35,7 +35,7 @@ if ($res) {
     <title>App Help Desk</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="icon" href="imagens/logo.png" type="image/x-icon">
+  <link rel="icon" href="img/iconSite.png" type="image/x-icon">
 
     <style>
         .card-home {
@@ -50,7 +50,7 @@ if ($res) {
 
     <nav class="navbar navbar-dark bg-dark">
         <a class="navbar-brand" href="home.php">
-            <img src="../app_help_desk_bd/imagens/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+            <img src="img/logoChapeu.png" width="30" height="30" class="d-inline-block align-top" alt="">
             App Help Desk
         </a>
         <ul class="navbar-nav">
@@ -73,7 +73,7 @@ if ($res) {
                         <div class="row">
                             <div class="col-4 d-flex justify-content-center">
                                 <a href="abertos.php" class="text-danger">
-                                    <img src="../app_help_desk_bd/imagens/abertos.png" width="70" height="70">
+                                    <img src="img/abertos.png" width="70" height="70">
                                     <p>Abertos(<?php
                                                 print($totalAbertos);
                                                 ?>)</p>
@@ -82,7 +82,7 @@ if ($res) {
 
                             <div class="col-4 d-flex justify-content-center">
                                 <a href="andamento.php" style="color:darkorange">
-                                    <img src="../app_help_desk_bd/imagens/andamento.png" width="70" height="70">
+                                    <img src="img/andamento.png" width="70" height="70">
                                     <p>Andamento(<?php
                                                     print($totalAndamento);
                                                     ?>)</p>
@@ -91,7 +91,7 @@ if ($res) {
 
                             <div class="col-4 d-flex justify-content-center">
                                 <a href="finalizado.php" style="color:teal">
-                                    <img src="../app_help_desk_bd/imagens/finalizados.png" width="70" height="70">
+                                    <img src="img/finalizados.png" width="70" height="70">
                                     <p>Finalizados(<?php
                                                     print($totalFinalizados);
                                                     ?>)</p>

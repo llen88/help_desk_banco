@@ -94,6 +94,7 @@ $qtdusuarios = $resusuarios-> num_rows;
                   <div class="form-group">
                   
                     <!-- titulo -->
+                     <label for="titulo">Titulo</label>
                     <input name="titulo" type="text" class="form-control" value="<?php print $row->titulo; ?>" required autofocus>
                   </div>
 

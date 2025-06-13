@@ -12,7 +12,7 @@ require "config.php";
         .table-responsive {
             overflow-x: auto;
         }
-
+ 
         .btn-sm {
             padding: 5px;
             /* Define um padding de 5px para os botões */
@@ -34,6 +34,25 @@ require "config.php";
             text-align: center;
             /* Centraliza o conteúdo das células */
         }
+        .else{
+            
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+            height: 500;
+            width: 400;
+            border:30px;
+            border-color: red;
+            border-width: 20px;
+            justify-content: center;
+            align-items: center;
+        }
+        p{
+            margin-top:250;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
 
         @media (max-width: 1000px) {
             .hide-on-small {
@@ -46,13 +65,14 @@ require "config.php";
                 display: none;
             }
         }
+
     </style>
 </head>
 
 <body>
     <nav class="navbar navbar-dark bg-dark">
         <a class="navbar-brand" href="home.php">
-            <img src="../app_help_desk_bd/imagens/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+            <img src="img/logoChapeu.png" width="30" height="30" class="d-inline-block align-top" alt="">
             App Help Desk
         </a>
         <ul class="navbar-nav">
@@ -114,10 +134,16 @@ require "config.php";
 
                 print "</tr>";        
             }
+           
             print "</tbody";
             print "</table";
             print "</div>";
         }
+         else{ 
+                print "<div class='else'>";
+                print "<p>NÃO HÁ USUARIOS A SEREM AUTORIZADOS</p>";
+                print "</div>";
+            }
 
         ?>
     </div>

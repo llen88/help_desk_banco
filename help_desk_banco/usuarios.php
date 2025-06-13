@@ -55,7 +55,7 @@ require "config.php";
 <body>
     <nav class="navbar navbar-dark bg-dark">
         <a class="navbar-brand" href="home.php">
-            <img src="../app_help_desk_bd/imagens/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+            <img src="img/logoChapeu.png" width="30" height="30" class="d-inline-block align-top" alt="">
             App Help Desk
         </a>
         <ul class="navbar-nav">
