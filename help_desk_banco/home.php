@@ -54,6 +54,22 @@ require_once "validador_acesso.php";
       margin: 50px auto;
       display: block;
     }
+        p{
+      text-align: 'center';
+      color: chocolate;
+      font-weight: bold;
+    }
+    a{
+     text-decoration: none;
+     text-align: 'center';
+     
+    }
+    .row{
+      flex:1;
+      align-items: center;
+      justify-content:'center';
+    }
+  </style>
   </style>
 </head>
 
@@ -85,6 +101,7 @@ require_once "validador_acesso.php";
               <div class="col-2 d-flex justify-content-center">
                 <a href="abrir_chamado.php">
                   <img src="./img/formulario.png" width="70" height="70">
+                  <p>Abrir chamado</p>
                 </a>
               </div>
 
@@ -92,6 +109,7 @@ require_once "validador_acesso.php";
               <div class="col-2 d-flex justify-content-center">
                 <a href="consultar_chamado.php">
                   <img src="./img/consultar-chamado.png" width="70" height="70">
+                  <p>Consultar</p>
                 </a>
               </div>
 
@@ -99,6 +117,7 @@ require_once "validador_acesso.php";
 
                 <a href="editar_chamado.php">
                   <img src="./img/editar-chamado.png" width="70" height="70">
+                      <p>Editar</p>
                 </a>
 
               </div>
@@ -106,18 +125,21 @@ require_once "validador_acesso.php";
               <div class="col-2 d-flex justify-content-center">
                 <a href="autorizar_usuario.php">
                   <img src="./img/autorizar.png" width="70" height="70">
+                   <p>Autorizar</p>
                 </a>
               </div>
 
               <div class="col-2 d-flex justify-content-center">
                 <a href="usuarios.php">
                   <img src="./img/icon-usuario.png" width="70" height="71">
+                  <p>Usuarios</p> 
                 </a>
               </div>
 
               <div class="col-2 d-flex justify-content-center">
                 <a href="relatorios.php">
                   <img src="./img/consulta-de-pesquisa.png" width="70" height="70">
+                  <P>Relatorios</P>
                 </a>
               </div>
 

@@ -92,7 +92,7 @@ $qtdusuarios = $resusuarios-> num_rows;
                    <input name="id_chamado" type="hidden" class="form-control" value="<?php print $row->id_chamado; ?>" required>
                     
                   <div class="form-group">
-                    <label class="label" >Título</label>
+                  
                     <!-- titulo -->
                     <input name="titulo" type="text" class="form-control" value="<?php print $row->titulo; ?>" required autofocus>
                   </div>
