@@ -1,6 +1,6 @@
 <?php
-require_once "validador_acesso.php";
-require "config.php";
+require_once "../validador_acesso.php";
+require "../config.php";
 ?>
 
 <html>
@@ -11,7 +11,7 @@ require "config.php";
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.3/dist/cyborg/bootstrap.min.css">
 
-  <link rel="icon" href="img/iconSite.png" type="image/x-icon">
+  <link rel="icon" href="../img/iconSite.png" type="image/x-icon">
 
 
   <style>
@@ -64,13 +64,13 @@ require "config.php";
 <body>
 
   <nav class="navbar navbar-dark bg-dark">
-    <a class="navbar-brand" href="home.php">
-      <img src="./img/logoChapeu.png" width="30" height="30" class="d-inline-block align-top" alt="">
+    <a class="navbar-brand" href="../home.php">
+      <img src="../img/logoChapeu.png" width="30" height="30" class="d-inline-block align-top" alt="">
       App Help Desk
     </a>
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link" href="home.php">VOLTAR</a>
+        <a class="nav-link" href="../home.php">VOLTAR</a>
       </li>
     </ul>
   </nav>

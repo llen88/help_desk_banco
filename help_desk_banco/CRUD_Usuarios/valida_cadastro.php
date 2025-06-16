@@ -1,14 +1,8 @@
-
 <?php
-
-    include 'config.php';
+    include '../config.php';
     //  verificar se o cadastro ja existe  
     $sql= "SELECT * FROM usuarios WHERE email='{$_POST['email']}'";
     $res= $conexao->query($sql);
-
-
-
-
 
     if($res->num_rows >0){
 
@@ -32,34 +26,11 @@
     $res =  $conexao -> query($sql);
     
     if($res ==true){
-    header('location: index.php?usuario=sucesso');
+    header('location:../index.php?usuario=sucesso');
     }
 
     else{
-        header('location: index.php?usuario=falha');
+        header('location: ../index.php?usuario=falha');
     }
 }
 ?>
-
-
-
-<!-- slq
-res   conn
-
-if se alterou mais de uma linha 
-se alterou mande erro e extit
-
-se foi 
-verificar se o perfil é igualo ao seleciona?  //nao poder ficar em branco
-
-se não 
-cadastre  todas variaveis com nomes usando post (não esqueça a codificação da senha)
-
-sql insert into  valores em oredem
-
-abrir a coneção
-
-
-se foir res true 
-usuario cusssedso 
-usuario falhalk -->

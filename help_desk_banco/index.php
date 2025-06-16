@@ -1,4 +1,4 @@
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -82,7 +82,7 @@
 
                 </div>
                 <div class="form-group">
-                    <a href="cadastro.php"><span>Ainda não cadastrado? Cadastre-se Já! 🙂</span></a>
+                    <a href="./CRUD_Usuarios/cadastro.php"><span>Ainda não cadastrado? Cadastre-se Já! 🙂</span></a>
                 </div>
                 </form>
             </div>

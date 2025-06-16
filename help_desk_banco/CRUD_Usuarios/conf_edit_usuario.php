@@ -1,6 +1,6 @@
 <?php
-    require_once "validador_acesso.php";
-    require 'config.php';
+    require_once "../validador_acesso.php";
+    require '../config.php';
 
     $id_usuario = $_POST['id_usuario'];
     $nome = $_POST['nome'];

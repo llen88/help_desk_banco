@@ -1,6 +1,6 @@
 <?php
-require_once "validador_acesso.php";
-require_once "config.php";
+require_once "../validador_acesso.php";
+require_once "../config.php";
 
 $sql = "SELECT * from usuarios WHERE id_usuario = {$_GET['id']}";
 $res = $conexao->query($sql);
@@ -15,7 +15,7 @@ $row = $res->fetch_object();
     <title>App help desk</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="icon" href="imagens/logo.png" type="image/x-icon">
+    <link rel="icon" href="../img/logoChapeu.png" type="image/x-icon">
 
     <style>
         .card-abrir-chamado {
@@ -28,9 +28,9 @@ $row = $res->fetch_object();
 
 <body>
     <nav class="nav-bar navbar-dark bg-dark">
-        <a class="navbar-brand" href="home.php">
+        <a class="navbar-brand" href="../home.php">
             <img src="" alt="">
-            <img src="../app_help_desk_BD/imagens/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+            <img src="../img/logoChapeu.png" width="30" height="30" class="d-inline-block align-top" alt="">
             App help desk
         </a>
     </nav>
@@ -70,15 +70,15 @@ $row = $res->fetch_object();
                                         <label>Perfil</label>
                                         <select name="perfil" class="form-control" required>
                                             <option value="" disabled selected><?php print $row->perfil; ?></option>
-                                            <option value="Usuário">Usuario</option>
+                                            <option value="Usuario">Adm</option>
                                             <option value="Adm">Adm</option>
-                                            <option value="Adm">Tec</option>
+                                            <option value="Tec">Tec</option>
                                         </select>
                                     </div>
 
                                     <div class="row mt-5">
                                         <div class="col-6">
-                                            <a class="btn btn-lg btn-warning btn-block" href="usuarios.php">Cancelar</a>
+                                            <a class="btn btn-lg btn-warning btn-block" href="usuarios.php" rel="prev">Cancelar</a>
                                         </div>
 
                                         <div class="col-6">

@@ -1,6 +1,6 @@
 <?php
-require_once "validador_acesso.php";
-require_once "config.php";
+require_once "../validador_acesso.php";
+require_once "../config.php";
 
 $id_chamado = $_POST['id_chamado'];
 $titulo=$_POST['titulo'];

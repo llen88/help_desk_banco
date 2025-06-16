@@ -1,6 +1,6 @@
 <?php
-    require_once "validador_acesso.php";
-    require_once "config.php";
+    require_once "../validador_acesso.php";
+    require_once "../config.php";
 
     if (isset($_GET['autorizar'], $_GET['id'])) {
         $id = (int) $_GET['id']; // evita injeção

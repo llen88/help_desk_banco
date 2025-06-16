@@ -1,6 +1,6 @@
 <?php
-require_once "validador_acesso.php";
-require_once "config.php";
+require_once "../validador_acesso.php";
+require_once "../config.php";
 ?>
 
 <html>
@@ -8,7 +8,7 @@ require_once "config.php";
 <title>App help desk</title>
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-<link rel="icon" href="imagens/logo.png" type="image/x-icon">
+<link rel="icon" href="../img/logoChapeu.png" type="image/x-icon">
 <style>
     .table-responsive {
         overflow-x: auto;
@@ -54,8 +54,8 @@ require_once "config.php";
 
 <body>
     <nav class="navbar navbar-dark bg-dark">
-        <a class="navbar-brand" href="home.php">
-            <img src="../app_help_desk_bd/imagens/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+        <a class="navbar-brand" href="../home.php">
+            <img src="../img/logoChapeu.png" width="30" height="30" class="d-inline-block align-top" alt="">
             App Help Desk
         </a>
         <ul class="navbar-nav">
@@ -119,7 +119,16 @@ require_once "config.php";
             print "</tbody>";
             print "</table>";
             print "</div>";
-        }
+
+
+            
+         }
+         else{ 
+                print "<div class='else'>";
+                print "<p>NÃO HÁ RELATORIOS ABERTOS</p>";
+                print "</div>";
+            }
+
         ?>
     </div>
 </body>

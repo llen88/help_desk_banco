@@ -1,13 +1,13 @@
 <?php
-require_once "validador_acesso.php";
-require "config.php";
+require_once "../validador_acesso.php";
+require "../config.php";
 ?>
 
 <html>
 
 <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="icon" href="img/iconSite.png" type="image/x-icon">
+    <link rel="icon" href="../img/iconSite.png" type="image/x-icon">
     <style>
         .table-responsive {
             overflow-x: auto;
@@ -72,7 +72,7 @@ require "config.php";
 <body>
     <nav class="navbar navbar-dark bg-dark">
         <a class="navbar-brand" href="home.php">
-            <img src="img/logoChapeu.png" width="30" height="30" class="d-inline-block align-top" alt="">
+            <img src="../img/logoChapeu.png" width="30" height="30" class="d-inline-block align-top" alt="">
             App Help Desk
         </a>
         <ul class="navbar-nav">

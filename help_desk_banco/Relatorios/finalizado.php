@@ -1,16 +1,16 @@
- <?php
-require_once "validador_acesso.php";
-require "config.php";
+<?php
+require_once "../validador_acesso.php";
+require_once "../config.php";
 ?>
 
 <html>
 
 <head>
     <meta charset="utf-8" />
-    <title>App Help Desk</title>
+    <title>App help desk</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="icon" href="imagens/logo.png" type="image/x-icon">
+    <link rel="icon" href="img/logoChapeu.png" type="image/x-icon">
     <style>
         .table-responsive {
             overflow-x: auto;
@@ -32,9 +32,9 @@ require "config.php";
             text-align: center;
         }
 
-        .status-andamento {
-            background-color: orange;
-            /* Fundo laranja */
+        .status-finalizado {
+            background-color: #28a745;
+            /* Fundo verde */
             color: #ffffff;
             /* Texto branco */
             font-weight: bold;
@@ -71,12 +71,12 @@ require "config.php";
     <div class="container">
         <br>
         <?php
-        $sql = "SELECT count(statuschamado) as 'Total' FROM chamados WHERE statuschamado ='Andamento'";
+        $sql = "SELECT count(statuschamado) as 'Total' FROM chamados WHERE statuschamado ='Finalizado'";
         $res = $conexao->query($sql);
         $row = $res->fetch_assoc();
         $total = $row['Total'];
 
-        $sql = "SELECT * FROM chamados WHERE statuschamado ='Andamento'";
+        $sql = "SELECT * FROM chamados WHERE statuschamado ='Finalizado'";
         $res = $conexao->query($sql);
         $qtd = $res->num_rows;
 
@@ -89,7 +89,7 @@ require "config.php";
             print "<table class='table table-hover table-bordered table-sm'>";
             print "<thead class='thead-light'>";
             print "<tr>";
-            print "<th class='status-andamento'> Status em Andamento </th>";
+            print "<th class='status-finalizado'> Status Finalizado </th>";
             print "<th colspan=4 class='total-chamados' style='text-align: left;'> $total Chamados</th>";
             print "</tr>";
             print "<tr>";
@@ -115,7 +115,7 @@ require "config.php";
                 while ($user = $resusuarios->fetch_object()) {
                     if ($user->id_usuario == $idusuario) {
                         print "<td>" . $user->nome . "</td>";
-                        break;
+                        break; 
                     }
                 }
                 print "</tr>";
@@ -123,7 +123,13 @@ require "config.php";
             print "</tbody>";
             print "</table>";
             print "</div>";
-        }
+       }
+         else{ 
+                print "<div class='else'>";
+                print "<p>NÃO HÁ RELATORIOS FINALIZADOSS</p>";
+                print "</div>";
+            }
+
         ?>
     </div>
 </body>

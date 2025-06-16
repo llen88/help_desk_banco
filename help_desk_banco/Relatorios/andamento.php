@@ -1,16 +1,16 @@
-<?php
-require_once "validador_acesso.php";
-require_once "config.php";
+ <?php
+require_once "../validador_acesso.php";
+require "../config.php";
 ?>
 
 <html>
 
 <head>
     <meta charset="utf-8" />
-    <title>App help desk</title>
+    <title>App Help Desk</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="icon" href="imagens/logo.png" type="image/x-icon">
+    <link rel="icon" href="img/logoChapeu.png" type="image/x-icon">
     <style>
         .table-responsive {
             overflow-x: auto;
@@ -32,9 +32,9 @@ require_once "config.php";
             text-align: center;
         }
 
-        .status-finalizado {
-            background-color: #28a745;
-            /* Fundo verde */
+        .status-andamento {
+            background-color: orange;
+            /* Fundo laranja */
             color: #ffffff;
             /* Texto branco */
             font-weight: bold;
@@ -58,7 +58,7 @@ require_once "config.php";
 <body>
     <nav class="navbar navbar-dark bg-dark">
         <a class="navbar-brand" href="home.php">
-            <img src="../app_help_desk_bd/imagens/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+            <img src="../img/logoChapeu.png" width="30" height="30" class="d-inline-block align-top" alt="">
             App Help Desk
         </a>
         <ul class="navbar-nav">
@@ -71,12 +71,12 @@ require_once "config.php";
     <div class="container">
         <br>
         <?php
-        $sql = "SELECT count(statuschamado) as 'Total' FROM chamados WHERE statuschamado ='Finalizado'";
+        $sql = "SELECT count(statuschamado) as 'Total' FROM chamados WHERE statuschamado ='Andamento'";
         $res = $conexao->query($sql);
         $row = $res->fetch_assoc();
         $total = $row['Total'];
 
-        $sql = "SELECT * FROM chamados WHERE statuschamado ='Finalizado'";
+        $sql = "SELECT * FROM chamados WHERE statuschamado ='Andamento'";
         $res = $conexao->query($sql);
         $qtd = $res->num_rows;
 
@@ -89,7 +89,7 @@ require_once "config.php";
             print "<table class='table table-hover table-bordered table-sm'>";
             print "<thead class='thead-light'>";
             print "<tr>";
-            print "<th class='status-finalizado'> Status Finalizado </th>";
+            print "<th class='status-andamento'> Status em Andamento </th>";
             print "<th colspan=4 class='total-chamados' style='text-align: left;'> $total Chamados</th>";
             print "</tr>";
             print "<tr>";
@@ -115,7 +115,7 @@ require_once "config.php";
                 while ($user = $resusuarios->fetch_object()) {
                     if ($user->id_usuario == $idusuario) {
                         print "<td>" . $user->nome . "</td>";
-                        break; 
+                        break;
                     }
                 }
                 print "</tr>";
@@ -123,7 +123,13 @@ require_once "config.php";
             print "</tbody>";
             print "</table>";
             print "</div>";
-        }
+    }
+         else{ 
+                print "<div class='else'>";
+                print "<p>NÃO HÁ RELATORIOS EM ANDAMENTO!   </p>";
+                print "</div>";
+            }
+
         ?>
     </div>
 </body>
